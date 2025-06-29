@@ -14,27 +14,31 @@
     }
 
     header {
-      background: #003366; /* dark blue */
-      color: white;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 1rem;
-      position: relative;
+    background: #003366;
+    color: white;
+    padding: 1.5rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
     }
 
-    /* Logo container on left side */
     .logo {
-      position: absolute;
-      left: 1rem;
-      top: 70%;
-      transform: translateY(-50%);
-      max-height: 160px;
-      max-width: 160px;
+    position: absolute;
+    left: 1rem;
+    top: 70%;
+    transform: translateY(-50%);
+    max-height: 150px;
+    max-width: 150px;
+    object-fit: contain;
     }
 
+    .header-text {
+    margin: 0 auto;
+    max-width: 600px;
+    }
     header h1 {
       margin: 0;
       font-size: 2rem;
@@ -90,7 +94,7 @@
   <header>
     <!-- Replace the src below with your actual logo URL or local path -->
     <img src="cabitourlogotext.png" alt="Free DC Bike Tour Logo" class="logo" />
-    <div>
+    <div class="header-text">
       <h1>Free DC Bike Tour</h1>
       <p>Discover the Nation's Capital by Bike — Pay What You Like</p>
     </div>
