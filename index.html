@@ -9,20 +9,42 @@
       font-family: Arial, sans-serif;
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
-      color: #333;
+      background: #fff7e8; /* beige/tan */
+      color: #003366; /* dark blue text */
     }
 
     header {
-      background: #0077cc;
+      background: #003366; /* dark blue */
       color: white;
-      padding: 2rem 1rem;
+      padding: 1.5rem 1rem;
       text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      position: relative;
+    }
+
+    /* Logo container on left side */
+    .logo {
+      position: absolute;
+      left: 1rem;
+      top: 70%;
+      transform: translateY(-50%);
+      max-height: 160px;
+      max-width: 160px;
     }
 
     header h1 {
       margin: 0;
       font-size: 2rem;
+      flex-grow: 1;
+    }
+
+    header p {
+      margin: 0.3rem 0 0;
+      font-size: 1.1rem;
+      font-weight: 300;
     }
 
     .container {
@@ -33,16 +55,25 @@
 
     .button {
       display: inline-block;
-      background: #0077cc;
+      background: #cc0000; /* red */
       color: white;
       padding: 0.75rem 1.5rem;
       text-decoration: none;
       border-radius: 8px;
       margin-top: 1rem;
+      transition: background-color 0.3s ease;
+    }
+    .button:hover,
+    .button:focus {
+      background: #990000; /* darker red on hover */
     }
 
     section {
       margin-bottom: 2rem;
+      background: white;
+      padding: 1rem 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
     }
 
     footer {
@@ -50,14 +81,19 @@
       padding: 1rem;
       background: #eee;
       font-size: 0.9rem;
+      color: #333;
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Free DC Bike Tour</h1>
-    <p>Discover the Nation's Capital by Bike — Pay What You Like</p>
+    <!-- Replace the src below with your actual logo URL or local path -->
+    <img src="cabitourlogotext.png" alt="Free DC Bike Tour Logo" class="logo" />
+    <div>
+      <h1>Free DC Bike Tour</h1>
+      <p>Discover the Nation's Capital by Bike — Pay What You Like</p>
+    </div>
   </header>
 
   <div class="container">
@@ -78,9 +114,29 @@
     </section>
 
     <section>
+      <h2>🚲 How to Rent a City Bike</h2>
+      <p>If you don't have your own bike, you can easily rent a Capital Bikeshare bike at any station nearby. Here’s how:</p>
+      <ul>
+        <li>Use the Capital Bikeshare app or kiosk at the station to purchase a single ride or day pass.</li>
+        <li>Follow the instructions to unlock a bike using the app or the kiosk code.</li>
+        <li>All bikes have adjustable seats—make sure to set it comfortably before riding.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>👧 Kids Policy</h2>
+      <p>Kids are welcome on the tour! However, participants must be large enough to safely ride a city bike on their own. Unfortunately, we don’t provide child seats or trailers, so please ensure your child is comfortable cycling independently.</p>
+    </section>
+
+    <section>
+      <h2>☁️ Weather & Cancellation Policy</h2>
+      <p>We want everyone to have a safe and enjoyable experience. Tours may be cancelled or rescheduled due to severe weather (heavy rain, thunderstorms, extreme heat). If the tour is cancelled, you will receive an email notification as soon as possible.</p>
+    </section>
+
+    <section>
       <h2>🗓 Book a Spot</h2>
       <p>Spaces are limited, so reserve your spot below:</p>
-      <a href="https://calendly.com/YOUR_USERNAME/dc-bike-tour" class="button" target="_blank">Book Now on Calendly</a>
+      <a href="https://calendly.com/buffalow250/bike-tour" class="button" target="_blank">Book Now on Calendly</a>
     </section>
 
     <section>
