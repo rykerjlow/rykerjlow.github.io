@@ -12,33 +12,35 @@
       background: #fff7e8; /* beige/tan */
       color: #003366; /* dark blue text */
     }
-
     header {
     background: #003366;
     color: white;
     padding: 1.5rem 1rem;
+    text-align: center;
+    }
+
+    .header-inner {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    text-align: center;
-    position: relative;
+    flex-wrap: wrap;
+    gap: 1rem;
+    max-width: 700px;
+    margin: 0 auto;
     }
 
     .logo {
-    position: absolute;
-    left: 1rem;
-    top: 70%;
-    transform: translateY(-50%);
-    max-height: 150px;
-    max-width: 150px;
+    max-height: 80px;
+    max-width: 80px;
     object-fit: contain;
     }
 
     .header-text {
-    margin: 0 auto;
-    max-width: 600px;
+    flex: 1 1 300px;
+    min-width: 200px;
     }
+
     header h1 {
       margin: 0;
       font-size: 2rem;
@@ -87,18 +89,29 @@
       font-size: 0.9rem;
       color: #333;
     }
+
+    @media (max-width: 600px) {
+  .header-inner {
+    flex-direction: column;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <!-- Replace the src below with your actual logo URL or local path -->
-    <img src="cabitourlogotext.png" alt="Free DC Bike Tour Logo" class="logo" />
-    <div class="header-text">
-      <h1>Free DC Bike Tour</h1>
-      <p>Discover the Nation's Capital by Bike — Pay What You Like</p>
+    <header>
+    <div class="header-inner">
+        <img src="cabitourlogotext.png" alt="Free DC Bike Tour Logo" class="logo" />
+        <div class="header-text">
+        <h1>Free DC Bike Tour</h1>
+        <p>Discover the Nation's Capital by Bike — Pay What You Like</p>
+        </div>
     </div>
-  </header>
+    </header>
 
   <div class="container">
 
